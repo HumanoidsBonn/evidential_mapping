@@ -5,8 +5,8 @@
 - Created the public `rohitmenon86/evidmtl` Hugging Face model repository.
 - Updated the umbrella and EvidMTL checkpoint links to the final model
   repository name and advanced the EvidMTL submodule pointer.
-- Prepared upload verification for the two intended Git LFS checkpoints and
-  their SHA-256 checksums.
+- Uploaded the two intended Git LFS checkpoints and verified their public Hub
+  file lists, byte sizes, and SHA-256 LFS object identifiers.
 
 ## 2026-11-17 14:11 CET
 
