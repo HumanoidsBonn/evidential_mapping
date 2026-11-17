@@ -1,5 +1,22 @@
 # Evidential Mapping
 
+[![Paper](https://img.shields.io/badge/IROS_2025-Paper-blue)](https://doi.org/10.1109/IROS60139.2025.11247528)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.04441-b31b1b.svg)](https://arxiv.org/abs/2503.04441)
+[![Video](https://img.shields.io/badge/Video-MP4-green)](media/menon25iros.mp4)
+
+Code for **“EvidMTL: Evidential Multi-Task Learning for Uncertainty-Aware
+Semantic Surface Mapping from Monocular RGB Images”**, by Rohit Menon, Nils
+Dengler, Sicong Pan, Gokul Krishna Chenchani, and Maren Bennewitz.
+
+<p align="center">
+  <img src="assets/paper/pipeline.png" width="900"
+       alt="EvidMTL predictions, uncertainty estimates, and generated EvidKimera TSDF map">
+</p>
+
+Given a monocular RGB image, EvidMTL jointly predicts semantic labels and
+depth together with their uncertainties. EvidKimera uses those uncertainty
+estimates to produce an uncertainty-aware semantic TSDF map.
+
 This repository is the entry point for the EvidMTL and EvidKimera
 uncertainty-aware semantic surface mapping pipeline. It pins the three public
 components as Git submodules:
@@ -9,6 +26,18 @@ components as Git submodules:
 | [`evidmtl`](https://github.com/HumanoidsBonn/evidmtl) | Evidential semantic segmentation and monocular depth estimation | [SwinMTL](https://github.com/PardisTaghavi/SwinMTL) | GPL-3.0 |
 | [`evidkimera`](https://github.com/HumanoidsBonn/evidkimera) | Uncertainty-aware semantic TSDF fusion | [Kimera-Semantics](https://github.com/MIT-SPARK/Kimera-Semantics) | BSD-2-Clause |
 | [`voxblox`](https://github.com/HumanoidsBonn/voxblox) | Custom Voxblox and `voxblox_ros` support for evidential fusion | [Voxblox](https://github.com/ethz-asl/voxblox) | BSD-3-Clause |
+
+## Video
+
+The 39-second project video is kept as MP4 to preserve its 1080p quality while
+remaining smaller than a full-length GIF. Click the preview to play it.
+
+<p align="center">
+  <a href="media/menon25iros.mp4">
+    <img src="assets/paper/pipeline.png" width="720"
+         alt="Play the EvidMTL and EvidKimera overview video">
+  </a>
+</p>
 
 ## What this work adds
 
@@ -27,6 +56,44 @@ The project introduced:
 These are extensions of SwinMTL, Kimera-Semantics, and Voxblox respectively;
 the original projects and publications are credited below and in each
 component repository.
+
+## Method and qualitative results
+
+### EvidMTL
+
+EvidMTL uses a shared encoder-decoder with evidential semantic and depth heads.
+The resulting uncertainty estimates are evaluated against the corresponding
+prediction errors.
+
+<p align="center">
+  <img src="assets/paper/evidmtl.png" width="1000"
+       alt="EvidMTL architecture and semantic and depth uncertainty outputs">
+</p>
+
+### EvidKimera
+
+EvidKimera integrates the evidential predictions into a semantic TSDF. Depth
+uncertainty controls geometric fusion weights, while semantic evidence updates
+the voxel semantic state and its uncertainty.
+
+<p align="center">
+  <img src="assets/paper/evidkimera.png" width="900"
+       alt="EvidKimera uncertainty-aware semantic mapping pipeline">
+</p>
+
+### Out-of-distribution uncertainty
+
+The paper evaluates zero-shot depth uncertainty on ScanNetV2 after training on
+NYUDepthV2. The visualization below compares depth error, aleatoric
+uncertainty, and epistemic uncertainty for EvidMTL and two ablations.
+
+<p align="center">
+  <img src="assets/paper/calibration.png" width="900"
+       alt="ScanNetV2 depth error and aleatoric and epistemic uncertainty comparison">
+</p>
+
+Figures and descriptions in this section are taken from the
+[arXiv paper](https://arxiv.org/abs/2503.04441).
 
 ## Clone
 
