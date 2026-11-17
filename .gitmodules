@@ -1,0 +1,9 @@
+[submodule "evidmtl"]
+	path = evidmtl
+	url = https://github.com/HumanoidsBonn/evidmtl.git
+[submodule "evidkimera"]
+	path = evidkimera
+	url = https://github.com/HumanoidsBonn/evidkimera.git
+[submodule "voxblox"]
+	path = voxblox
+	url = https://github.com/HumanoidsBonn/voxblox.git
