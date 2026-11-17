@@ -117,7 +117,7 @@ The EvidMTL release uses two checkpoints:
   ground-truth mean prior without added noise.
 
 They are distributed separately through the
-[EvidMTL Hugging Face model repository](https://huggingface.co/rohitmenon86/evidmtl_dc).
+[EvidMTL Hugging Face model repository](https://huggingface.co/rohitmenon86/evidmtl).
 
 ## Citation
 

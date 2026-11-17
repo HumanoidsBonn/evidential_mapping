@@ -1,5 +1,7 @@
 # Recent commits
 
+- 2026-11-17 [Docs/Models] Updated the release checkpoint destination to the
+  public `rohitmenon86/evidmtl` Hugging Face model repository.
 - 2026-11-17 [Docs/Media] Added the IROS 2025 project video and four figures
   from the official arXiv source; expanded the umbrella README with the paper
   overview, method, qualitative results, and direct paper/video links.

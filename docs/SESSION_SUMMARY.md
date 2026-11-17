@@ -1,5 +1,13 @@
 # Session summary
 
+## 2026-11-17 14:20 CET
+
+- Created the public `rohitmenon86/evidmtl` Hugging Face model repository.
+- Updated the umbrella and EvidMTL checkpoint links to the final model
+  repository name and advanced the EvidMTL submodule pointer.
+- Prepared upload verification for the two intended Git LFS checkpoints and
+  their SHA-256 checksums.
+
 ## 2026-11-17 14:11 CET
 
 - Added the 1080p project video as an MP4 and linked it through a paper-figure

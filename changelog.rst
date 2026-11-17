@@ -4,6 +4,8 @@ Changelog
 2026-11-17
 ----------
 
+* Updated model checkpoint links to the public ``rohitmenon86/evidmtl``
+  Hugging Face repository.
 * Added the IROS 2025 project video and four figures from the official arXiv
   paper to the umbrella documentation.
 * Expanded the README with paper links, authors, method figures, and
